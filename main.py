@@ -5,9 +5,9 @@ app = Flask(__name__)
 
 respuestas = ['Son dos cosas distintas. El Alzheimer es un tipo de demencia. Que es para mí la demencia, lo que para todo el mundo debería ser una enfermedad degenerativa que va afectando la memoria y otras funciones intelectuales más. Pero si tú me preguntas más ya sentimentalmente que es la demencia, es la importancia de tener familia.',
 'Es una enfermedad tremendamente difícil, es una enfermedad yo no sé, catastrófica realmente. Deteriorante socialmente, con una progresión paulatina'
-'',
-'',
-'']
+'Es algo triste, porque es donde la persona pierde su yo, su autonomía y si es verdad ellos se enfocan en otro mundo, ellos ya no van a sufrir realmente, el que va a sufrir es el cuidador,',
+'Grupo de enfermedades o un grupo de síndromes caracterizados por eso, por la neuro-degeneración, por la disminución de la reserva cognitiva, de la reserva neurológica.']
+
 
 
 @app.route('/')
