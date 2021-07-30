@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="https://kichwaaya.files.wordpress.com/2016/12/logo-kichwa-aya.png?w=270" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-header navbar-dark  justify-content-center" style="background-color: #154360;">
+        <span class="navbar-brand mb-0 h2" style="font-size: 2rem;"><img src="https://kichwaaya.files.wordpress.com/2016/12/logo-kichwa-aya.png?w=270" height="50" width="50" alt="" srcset=""> Proyecto</span>
+    </nav>
+
+    <main>
+        <header class="bg-light py-2 mb-4">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-lg-12">
+                        <h1 class="display-4 text-dark mt-5 mb-2" style="text-align: center !important;">Análisis de la pregunta 7</h1>
+                        <p class="lead mb-5 text-dark-50" style="text-align: center !important;">P7. ¿Qué entiende por demencia?</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container mt-5 text-center">
+            <div class="row mt-4">
+                <div class="col-5 text-start">
+                    <p class="mb-2 mt-2">Ingresa una frase, párrafo.</p>
+                    <textarea name="frase" id="frase" cols="60" rows="10" placeholder="Tu frase o párrafo aqui"></textarea>
+                </div>
+                <div class="col table-responsive" style="height: 285px;">
+                    <table class="table table-hover shadow  caption-top" id="tabla">
+                        <caption class="text-body">Frases con sus respectivo sentimiento</caption>
+                        <thead style="background-color: #0E6655; color: white;">
+                            <th>#</th>
+                            <th>Respuesta</th>
+                            <th>Jaccard</th>
+                            <th>Coseno</th>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                        <tfoot style="background-color: #0E6655; color: white;">
+                            <th>#</th>
+                            <th>Respuesta</th>
+                            <th>Jaccard</th>
+                            <th>Coseno</th>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5 mt-3">
+                    <button class="btn btn-primary shadow" id="consultar">Consultar</button>
+                </div>
+                <div class="col-7 mt-3">
+                    <div class="card shadow">
+                        <h5 class="card-header" style="background-color: #0E6655; color: white;">Porcentajes</h5>
+                        <ul class="list-group list-group-flush text-start" id="porcentaje">
+                            <li class="list-group-item "> <strong>Metrica </strong> <strong>MODELO BIO MEDICO: </strong><small>0.00%</small> <strong>ENFOQUE PSICOSOCIAL - COMUNITARIO: </strong><small>0.00%</small> <strong>ENFOQUE COTIDIANO: </strong><small>0.00%</small></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container mt-5">
+        <hr>
+        <p> &copy; 2021</p>
+    </footer>
+
+    <div id="myModal" class="modal modal-fullscreen fade " role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: transparent;">
+                <div class="modal-body text-center" style="margin-top: 30%;">
+                    <div class="loader" style="margin-left: auto; margin-right: auto;"></div>
+                    <p style="color: white;">Cargando...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scr.js') }}"></script>
+</body>
+
+</html>
